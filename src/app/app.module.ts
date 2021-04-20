@@ -3,15 +3,17 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { CounterGeneratorComponent } from './counter-generator/counter-generator.component';
+// import { CounterGeneratorComponent } from './counter-generator/counter-generator.component';
 import { CounterComponent } from './counter/counter.component';
+// import { SuperCounterComponent } from './super-counter/super-counter.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CounterGeneratorComponent,
+    // CounterGeneratorComponent,
     CounterComponent,
+    // SuperCounterComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,29 @@
 <div class="container text-center">
+    
+    <!-- @Input iterator: 1
+         @Input initValue: 0
+         @Input type: Normal;
+
+         enum types {
+             Super
+             Normal,
+             GigaSuperUltraPog,
+         }
+        
+        addCounter() {
+            createCounter(1, 0)
+
+            if (counters.getSuper === 3) {
+                creategigasuperultrapoggers Counter
+            }
+            
+            if (supercounter conditions) {
+                createCounter(3, counters.getTotal)
+                clearcounters;
+            }
+        }-->
     <h1>{{value}}</h1>
     
-    <button [disabled]="value <= 0" (click) ="incrementValue(-1)">Decrease</button>
-    <button (click) = "incrementValue(1)">Increase</button>
+    <button [disabled]="value <= 0" (click) ="changeValue(false)">Decrease</button>
+    <button (click) = "changeValue(true)">Increase</button>
 </div>

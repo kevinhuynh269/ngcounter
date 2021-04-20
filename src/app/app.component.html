@@ -1,5 +1,9 @@
 <h1>{{title}}</h1>
 
-<app-counter *ngFor="let counter of counters"></app-counter>
+<app-counters *ngFor="let counter of counters"> </app-counters>
 
 <button (click)="addCounter()">Create</button>
+<!-- 
+<div *ngIf="findLengthOfCounter()"></div>
+
+<app-super-counter *ngFor="let counter of superCounters"></app-super-counter> -->
