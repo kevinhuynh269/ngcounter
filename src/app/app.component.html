@@ -1,7 +1,5 @@
 <h1>{{title}}</h1>
 
-<ul class='counters'>
-  <app-counter *ngFor="let counter of counters"></app-counter>
-</ul>
+<app-counter *ngFor="let counter of counters"></app-counter>
 
 <button (click)="addCounter()">Create</button>
