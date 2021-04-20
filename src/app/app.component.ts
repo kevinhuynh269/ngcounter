@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CounterComponent } from './counter/counter.component';
 import { SuperCounterComponent } from './super-counter/super-counter.component';
+import "@angular/compiler";
 // import { SuperCounterComponent } from './super-counter/super-counter.component';
 
 @Component({

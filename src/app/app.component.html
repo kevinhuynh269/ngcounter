@@ -1,7 +1,7 @@
 <h1>{{title}}</h1>
 
-<app-counter-details *ngFor="let counter of counters" [counter] = "counter"> </app-counter-details>
-<app-counter-details *ngFor="let counter of superCounters" [counter] = "counter"></app-counter-details>
+<app-counter-details *ngFor="let counter of counters" [counter] = "counter" message="This is a Normal Counter"></app-counter-details>
+<app-counter-details *ngFor="let counter of superCounters" [counter] = "counter" message = "🔥🔥🔥 SUPER COUNTER !!!! 🔥🔥🔥🔥🔥"></app-counter-details>
 
 <!-- <app-counter-details *ngFor="let counter of counters" [counter] = "counters"></app-counter-details> -->
 

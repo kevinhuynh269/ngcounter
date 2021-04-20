@@ -24,6 +24,7 @@ export class SuperCounterComponent implements OnInit {
 
   increaseValue() {
     this.value += this.iterator;
+    
   }
 
   decreaseValue() {

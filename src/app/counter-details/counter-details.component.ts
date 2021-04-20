@@ -10,8 +10,8 @@ import { SuperCounterComponent } from '../super-counter/super-counter.component'
 export class CounterDetailsComponent implements OnInit {
   public value: number = 0;
 
-  @Input() public counter: CounterComponent | SuperCounterComponent; 
-  // @Input() public message: string;
+  @Input() counter: CounterComponent | SuperCounterComponent; 
+  @Input('message') message: string;
 
   constructor() {
 
