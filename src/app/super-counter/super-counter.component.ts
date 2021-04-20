@@ -6,10 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./super-counter.component.css']
 })
 export class SuperCounterComponent implements OnInit {
+  value : number;
+  iterator : number = 3;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
+    this.value = 0;
   }
 
+  ngOnInit(): void {
+
+  }
+
+  setValue(i: number) {
+    this.value = i;
+  }
+
+  increaseValue() {
+    this.value += this.iterator;
+  }
+
+  decreaseValue() {
+    this.value -= this.iterator;
+  }
 }

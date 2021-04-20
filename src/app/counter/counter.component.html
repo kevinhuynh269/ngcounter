@@ -1,6 +1,6 @@
 <div class="container text-center">
     <h1>{{value}}</h1>
     
-    <button [disabled]="value <= 0" (click) ="changeValue(false)">Decrease</button>
-    <button (click) = "changeValue(true)">Increase</button>
+    <button [disabled]="value <= 0" (click) ="decreaseValue()">Decrease</button>
+    <button (click) = "increaseValue()">Increase</button>
 </div>

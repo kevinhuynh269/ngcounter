@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CounterComponent } from './counter/counter.component';
+import { CounterTypes } from "./enum";
+import { SuperCounterComponent } from './super-counter/super-counter.component';
 // import { SuperCounterComponent } from './super-counter/super-counter.component';
 
 @Component({
@@ -11,21 +13,28 @@ export class AppComponent {
   title: string = 'Angular Counter';
 
   counters: CounterComponent[] = [];
-
+  superCounters: SuperCounterComponent[] = [];
   addCounter() {
+    console.log(this.counters);
     if (this.counters.length == 5) {
-      let total: number = 0;
+      
+      let total = this.counters.reduce((total, obj) => total + obj.value, 0)
 
-      for (const counter of this.counters) {
-        total += counter.value;
-      }
+      console.log(`total is ${total}`);
 
+      let superComponent = new SuperCounterComponent();
+
+      console.log(total);
+      superComponent.value = total;
+      
+      this.superCounters.push(superComponent);
       this.counters = [];
+    } else {
       this.counters.push(new CounterComponent());
     }
-
-    this.counters.push(new CounterComponent());
   }
+
+ 
   // findLengthOfCounter(){
   //   // if(this.counters.length == 6){
   //   //   this.counters = [];

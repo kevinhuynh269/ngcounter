@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 // import { CounterGeneratorComponent } from './counter-generator/counter-generator.component';
 import { CounterComponent } from './counter/counter.component';
 import { SuperCounterComponent } from './super-counter/super-counter.component';
+import { CounterDetailsComponent } from './counter-details/counter-details.component';
 // import { SuperCounterComponent } from './super-counter/super-counter.component';
 
 
@@ -15,6 +16,7 @@ import { SuperCounterComponent } from './super-counter/super-counter.component';
     // CounterGeneratorComponent,
     CounterComponent,
     SuperCounterComponent,
+    CounterDetailsComponent,
     // SuperCounterComponent,
   ],
   imports: [

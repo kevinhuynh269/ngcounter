@@ -1,15 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-enum CounterTypes {
-  Normal,
-  Super
-}
-
-let iterators = new Map<number, number>([
-  [CounterTypes.Normal, 1],
-  [CounterTypes.Super, 3]
-]);
-
 @Component({
   selector: 'app-counters',
   templateUrl: './counter.component.html',
@@ -18,19 +8,20 @@ let iterators = new Map<number, number>([
 
 export class CounterComponent implements OnInit {
   value : number = 0;
-  type : CounterTypes = CounterTypes.Normal;
-  iterator : number = iterators.get(this.type);
+  iterator : number = 1;
 
   constructor() {
-    
+
   }
 
-  ngOnInit(i: number = 0): void {
-    this.value = i;
+  ngOnInit(): void {
   }
 
-  changeValue(increase: boolean = true) {
-    increase ? this.value += this.iterator : this.value -= this.iterator;
+  increaseValue() {
+    this.value += this.iterator;
   }
 
+  decreaseValue() {
+    this.value -= this.iterator;
+  }
 }
