@@ -1,1 +1,4 @@
-<p>counter-details works! value of counter is = {{value}}</p>
+Your value is: {{counter.value}}
+<button [disabled]="counter.value <= 0" (click) ="decreaseValue()">Decrease</button>
+<button (click) = "increaseValue()">Increase</button>
+<br>

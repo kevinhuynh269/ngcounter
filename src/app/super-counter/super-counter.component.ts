@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './super-counter.component.html',
   styleUrls: ['./super-counter.component.css']
 })
+
 export class SuperCounterComponent implements OnInit {
   value : number;
   iterator : number = 3;

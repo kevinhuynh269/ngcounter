@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CounterComponent } from './counter/counter.component';
-import { CounterTypes } from "./enum";
 import { SuperCounterComponent } from './super-counter/super-counter.component';
 // import { SuperCounterComponent } from './super-counter/super-counter.component';
 
@@ -33,21 +32,4 @@ export class AppComponent {
       this.counters.push(new CounterComponent());
     }
   }
-
- 
-  // findLengthOfCounter(){
-  //   // if(this.counters.length == 6){
-  //   //   this.counters = [];
-  //   //   this.superCounters.push(new SuperCounterComponent());
-  //   //   return true;
-  //   // }
-  //   return false;
-
-  // }
-
-  
-
-  // incrementValue(counter: CounterComponent, i: number) {
-  //   counter.incrementValue(i)
-  // }
 }
