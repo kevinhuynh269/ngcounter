@@ -9,10 +9,14 @@ import { CounterComponent } from './counter/counter.component';
 export class AppComponent {
   title: string = 'Angular Counter';
 
-  counters: Array<CounterComponent> = [];
+  counters: CounterComponent[] = [];
 
   addCounter() {
     console.log('add counter')
     this.counters.push(new CounterComponent());
   }
+
+  // incrementValue(counter: CounterComponent, i: number) {
+  //   counter.incrementValue(i)
+  // }
 }

@@ -1,17 +1,7 @@
 <h1>{{title}}</h1>
-<!-- 
-<ul class="counters">
-  <li *ngFor="let counter of counters">
-</ul>
--->
-
-
-<!-- <p *ngFor="let k of 6;">k</p> -->
 
 <ul class='counters'>
-  <li *ngFor="let counter of counters">
-    <div>{{counter.value}}</div>
-  </li>
+  <app-counter *ngFor="let counter of counters"></app-counter>
 </ul>
 
 <button (click)="addCounter()">Create</button>
