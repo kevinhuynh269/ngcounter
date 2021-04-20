@@ -1,8 +1,17 @@
-<div class="container text-center">
-  <h1>{{ title }}</h1>
-  <h1>{{value}}</h1>
-  
-  <button (click) = "incrementValue(-1)">Decrease</button>
-  <button (click) = "incrementValue(1)">Increase</button>
+<h1>{{title}}</h1>
+<!-- 
+<ul class="counters">
+  <li *ngFor="let counter of counters">
+</ul>
+-->
 
-</div>
+
+<!-- <p *ngFor="let k of 6;">k</p> -->
+
+<ul class='counters'>
+  <li *ngFor="let counter of counters">
+    <div>{{counter.value}}</div>
+  </li>
+</ul>
+
+<button (click)="addCounter()">Create</button>

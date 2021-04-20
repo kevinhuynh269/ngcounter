@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./counter-generator.component.css']
 })
 export class CounterGeneratorComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {

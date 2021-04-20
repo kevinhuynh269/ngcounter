@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CounterComponent } from './counter/counter.component';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'Angular Counter';
-  value : number = 0;
 
-  incrementValue(i: number) {
-    this.value += i;
+  counters: Array<CounterComponent> = [];
+
+  addCounter() {
+    console.log('add counter')
+    this.counters.push(new CounterComponent());
   }
 }

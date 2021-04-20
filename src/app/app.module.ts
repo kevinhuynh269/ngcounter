@@ -4,11 +4,14 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CounterGeneratorComponent } from './counter-generator/counter-generator.component';
+import { CounterComponent } from './counter/counter.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CounterGeneratorComponent
+    CounterGeneratorComponent,
+    CounterComponent,
   ],
   imports: [
     BrowserModule,
