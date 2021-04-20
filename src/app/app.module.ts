@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 // import { CounterGeneratorComponent } from './counter-generator/counter-generator.component';
 import { CounterComponent } from './counter/counter.component';
+import { SuperCounterComponent } from './super-counter/super-counter.component';
 // import { SuperCounterComponent } from './super-counter/super-counter.component';
 
 
@@ -13,6 +14,7 @@ import { CounterComponent } from './counter/counter.component';
     AppComponent,
     // CounterGeneratorComponent,
     CounterComponent,
+    SuperCounterComponent,
     // SuperCounterComponent,
   ],
   imports: [

@@ -13,15 +13,17 @@ export class AppComponent {
   counters: CounterComponent[] = [];
 
   addCounter() {
-    // if (this.counters.length == 5) {
-    //   let total: number = 0;
+    if (this.counters.length == 5) {
+      let total: number = 0;
 
-    //   for (const counter of this.counters) {
-    //     total += counter.value;
-    //   }
+      for (const counter of this.counters) {
+        total += counter.value;
+      }
 
-    //   this.counters.push(new CounterComponent());
-    // }
+      this.counters = [];
+      this.counters.push(new CounterComponent());
+    }
+
     this.counters.push(new CounterComponent());
   }
   // findLengthOfCounter(){
