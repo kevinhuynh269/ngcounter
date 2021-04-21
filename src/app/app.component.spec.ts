@@ -35,5 +35,24 @@ describe('AppComponent', () => {
     expect(component.counters.length).toEqual(0);
     expect(component.superCounters.length).toEqual(0);
   });
+
+  it('AddCounter Functionality', () => {
+    expect(component.counters.length).toEqual(0);
+    component.addCounter();
+    expect(component.counters.length).toEqual(1);
+  });
+
+  it('Create Super Counter', () => {
+    expect(component.counters.length).toEqual(0);
+    expect(component.superCounters.length).toEqual(0);
+    component.addCounter();
+    component.addCounter();
+    component.addCounter();
+    component.addCounter();
+    component.addCounter();
+    component.addCounter();
+    expect(component.counters.length).toEqual(0);
+    expect(component.superCounters.length).toEqual(1);
+  });
   
 });
