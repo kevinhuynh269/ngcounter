@@ -10,6 +10,7 @@ export class SuperDuperCounterComponent implements OnInit {
   value : number;
   iterator : number = 1;
   click : boolean = false;
+  started : boolean = false;
 
   constructor() {
     this.value = 0;
@@ -33,6 +34,12 @@ export class SuperDuperCounterComponent implements OnInit {
   }
 
   public start() {
+    if (this.started) {
+      return;
+    }
+
+    this.started = true;
+
     interval(1000)
       .subscribe(() => {
         this.increaseValue();

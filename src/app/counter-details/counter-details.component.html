@@ -1,5 +1,5 @@
 
-<div class="{{counter.click ? 'card text-white bg-dark mb-3' : 'card text-light bg-dark mb-3'}}">
+<div class="{{counter.click ? 'card text-light bg-dark mb-3' : 'card text-dark bg-light mb-3'}}">
   <div class="card-body">
     <img *ngIf="message == '🔥🔥🔥 SUPER DUPER COUNTER !!!! 🔥🔥🔥🔥🔥';" class="card-img-top duper" src="..\\..\\assets\\images\\1200px-Big_Chain_Chomp_SMO.png" alt="Card image cap">
     <img *ngIf="message == '🔥🔥🔥 SUPER COUNTER !!!! 🔥🔥🔥🔥🔥';" class="card-img-top" src="..\\..\\assets\\images\\profile-mk-bowser.7bf2a8f2.aead314d58b63e27.png" alt="Card image cap">
@@ -16,7 +16,7 @@
     <ng-template #startBlock class="timerCounter">
       <div style="display: flex;">
         <!--Make timer class have a bigger button-->
-        <button class="btn btn-success timer" id='start'>Start</button>
+        <button [disabled]="counter.started" (click) = "counter.start()" class="btn btn-success timer" id='start'>Start</button>
         <div class="p-3">{{counter.value}}</div>
       </div>
     </ng-template>
