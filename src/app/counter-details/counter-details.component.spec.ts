@@ -11,6 +11,9 @@ describe('CounterDetailsComponent', () => {
   let counter: CounterComponent;
   let superCounter: SuperCounterComponent;
 
+  const normalMessage = "This is a Normal Counter";
+  const superMessage = '🔥🔥🔥 SUPER COUNTER !!!! 🔥🔥🔥🔥🔥';
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ CounterDetailsComponent ]
@@ -20,12 +23,12 @@ describe('CounterDetailsComponent', () => {
 
   const addCounter = () =>{
     component.counter = counter;
-    component.message = "This is a Normal Counter";
+    component.message = normalMessage;
   }
 
   const addSuperCounter =() => {
     component.counter = superCounter;
-    component.message = '🔥🔥🔥 SUPER COUNTER !!!! 🔥🔥🔥🔥🔥';
+    component.message = superMessage;
   }
 
   beforeEach(() => {
@@ -66,8 +69,14 @@ describe('CounterDetailsComponent', () => {
   })
 
   it("checks if the message is correct", () => {
-    expect(component.message).toEqual('This is a Normal Counter')
+    expect(component.message).toEqual(normalMessage)
+
+    addSuperCounter();
+    fixture.detectChanges();
+
+    expect(component.message).toEqual(superMessage)
   })
+
 
 
 });
