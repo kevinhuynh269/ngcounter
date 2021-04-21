@@ -1,4 +1,15 @@
 .card-body:hover {
-    box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px !important;
-    transform: translate3d(0px, -1px, 0px) !important;
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+    transform: translate3d(0px, -2px, 0px);
   }
+
+.card{
+  width: 18rem;
+  margin: 20px;
+  border-radius: 5%;
+}
+
+.btn{
+  padding-left: 8%;
+  padding-right: 8%;
+}

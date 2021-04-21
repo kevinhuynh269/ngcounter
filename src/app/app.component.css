@@ -2,3 +2,17 @@ button{
     justify-content: center;
 }
 
+.inter{
+    display: flex; 
+    padding: 10px; 
+    margin-top: 20px; 
+    flex-wrap: wrap;
+}
+.display-6{
+    color: #73f218; 
+    font-family:'Rancho', cursive;
+}
+
+hr{
+    border-top: 1px solid black !important;
+}

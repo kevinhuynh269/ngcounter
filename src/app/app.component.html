@@ -3,15 +3,15 @@
     <div class="container">
         <div class="row " style="text-align: center;">
             <div class="col-sm my-auto">
-                <h1 class="display-6" style="color: #73f218; font-family:'Rancho', cursive !important;">{{title}}</h1>
-                <hr style="border-top: 1px solid black;">
+                <h1 class="display-6">{{title}}</h1>
+                <hr >
             </div>
     
             <div class="col-sm my-auto">
                 <button class="btn btn-primary btn-lg" (click)="addCounter()">Create</button>
             </div>
         </div>
-        <div style="display: flex; padding: 10px; margin-top: 20px; flex-wrap: wrap;">
+        <div class="inter">
             <app-counter-details  *ngFor="let counter of superCounters" [counter] = "counter" message = "🔥🔥🔥 SUPER COUNTER !!!! 🔥🔥🔥🔥🔥"></app-counter-details>
             <app-counter-details  *ngFor="let counter of counters" [counter] = "counter" message="This is a Normal Counter"></app-counter-details>
 

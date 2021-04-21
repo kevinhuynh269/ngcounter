@@ -8,14 +8,6 @@ import { SuperCounterComponent } from '../super-counter/super-counter.component'
   styleUrls: ['./counter-details.component.css']
 })
 export class CounterDetailsComponent implements OnInit {
-
-  model = {
-    left: true,
-    middle: false,
-    right: false
-  };
-  public value: number = 0;
-
   @Input() counter: CounterComponent | SuperCounterComponent; 
   @Input('message') message: string;
 
