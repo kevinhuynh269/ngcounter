@@ -12,6 +12,7 @@
             </div>
         </div>
         <div class="inter">
+            <app-counter-details  *ngFor="let counter of superDuperCounters" [counter] = "counter" message = "🔥🔥🔥 SUPER DUPER COUNTER !!!! 🔥🔥🔥🔥🔥"></app-counter-details>
             <app-counter-details  *ngFor="let counter of superCounters" [counter] = "counter" message = "🔥🔥🔥 SUPER COUNTER !!!! 🔥🔥🔥🔥🔥"></app-counter-details>
             <app-counter-details  *ngFor="let counter of counters" [counter] = "counter" message="This is a Normal Counter"></app-counter-details>
 

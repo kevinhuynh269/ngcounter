@@ -3,6 +3,8 @@ import { CounterComponent } from '../counter/counter.component';
 import { SuperCounterComponent } from '../super-counter/super-counter.component';
 import { SuperDuperCounterComponent } from '../super-duper-counter/super-duper-counter.component';
 
+import { BrowserModule } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-counter-details',
   templateUrl: './counter-details.component.html',
