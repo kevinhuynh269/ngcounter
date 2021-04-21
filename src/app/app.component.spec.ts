@@ -31,8 +31,9 @@ describe('AppComponent', () => {
     expect(component.title).toBe("Angular Counter");
   });
 
-  it('Add Counter Functionality',()=>{
-    
+  it('See if Lists are initialized to empty',()=>{
+    expect(component.counters.length).toEqual(0);
+    expect(component.superCounters.length).toEqual(0);
   });
   
 });
