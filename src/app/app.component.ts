@@ -14,6 +14,7 @@ export class AppComponent {
 
   counters: CounterComponent[] = [];
   superCounters: SuperCounterComponent[] = [];
+  
   addCounter() {
     console.log(this.counters);
     if (this.counters.length == 5) {

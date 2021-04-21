@@ -19,24 +19,20 @@ describe('AppComponent', () => {
     component = fixture.componentInstance;
 
     fixture.detectChanges();
+
+    fixture.autoDetectChanges();
   });
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
-  it(`should have as title 'Angular Counter'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Angular Counter');
+  it('Check to see if title is equal to angular counter',()=>{
+    expect(component.title).toBe("Angular Counter");
   });
 
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Angular Counter');
+  it('Add Counter Functionality',()=>{
+    
   });
+  
 });
