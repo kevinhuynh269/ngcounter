@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval, Subscription } from "rxjs";
 
 @Component({
   selector: 'app-super-duper-counter',
@@ -29,6 +30,13 @@ export class SuperDuperCounterComponent implements OnInit {
 
   decreaseValue() {
     this.value -= this.iterator;
+  }
+
+  public start() {
+    interval(1000)
+      .subscribe(() => {
+        this.increaseValue();
+      });
   }
 
 }

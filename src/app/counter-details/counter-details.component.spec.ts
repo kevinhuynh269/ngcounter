@@ -1,5 +1,5 @@
 
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, discardPeriodicTasks, fakeAsync, flush, TestBed, tick } from '@angular/core/testing';
 import { CounterComponent } from '../counter/counter.component';
 import { SuperCounterComponent } from '../super-counter/super-counter.component';
 import { SuperDuperCounterComponent } from '../super-duper-counter/super-duper-counter.component';
@@ -120,6 +120,32 @@ describe('CounterDetailsComponent', () => {
 
     expect(fixture.nativeElement.querySelector("#start")).toBeDefined();
   })
+
+  it("make sure start button disables", <any>fakeAsync(() : void => {
+    component.counter = superDuperCounter;
+
+    fixture.detectChanges();
+
+    let superDuper : SuperDuperCounterComponent = superDuperCounter;
+
+    fixture.detectChanges();
+
+    superDuper.start();
+
+    tick(2000);
+
+    fixture.detectChanges();
+
+    expect(superDuper.value).toEqual(2);
+
+    tick(10000);
+
+    expect(superDuper.value).toEqual(12)
+
+    flush();
+    discardPeriodicTasks();
+
+  }))
 
   // it("check value of super duper counter", () => {
   //   component.
