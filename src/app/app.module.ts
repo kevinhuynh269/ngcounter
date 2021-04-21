@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CounterComponent } from './counter/counter.component';
 import { SuperCounterComponent } from './super-counter/super-counter.component';
 import { CounterDetailsComponent } from './counter-details/counter-details.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { SuperCounterComponent } from './super-counter/super-counter.component';
 
 
@@ -21,7 +22,8 @@ import { CounterDetailsComponent } from './counter-details/counter-details.compo
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
