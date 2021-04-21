@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { CounterComponent } from './counter/counter.component';
 import { SuperCounterComponent } from './super-counter/super-counter.component';
 import "@angular/compiler";
+import { SuperDuperCounterComponent } from './super-duper-counter/super-duper-counter.component';
+import { SSL_OP_NETSCAPE_CHALLENGE_BUG } from 'node:constants';
 // import { SuperCounterComponent } from './super-counter/super-counter.component';
 
 @Component({
@@ -14,6 +16,7 @@ export class AppComponent {
 
   counters: CounterComponent[] = [];
   superCounters: SuperCounterComponent[] = [];
+  superDuperCounters: SuperDuperCounterComponent[] = [];
   
   addCounter() {
     if (this.counters.length == 5) {
@@ -24,6 +27,16 @@ export class AppComponent {
       
       this.superCounters.push(superComponent);
       this.counters = [];
+
+      if (this.superCounters.length == 3) {
+        let total = this.superCounters.reduce((total, obj) => total + obj.value, 0);
+
+        let superDuper = new SuperDuperCounterComponent();
+        superDuper.value = total;
+
+        this.superDuperCounters.push(superDuper);
+        this.superCounters = [];
+      }
     } else {
       this.counters.push(new CounterComponent());
     }

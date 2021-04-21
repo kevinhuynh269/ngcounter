@@ -86,5 +86,34 @@ describe('AppComponent', () => {
     expect(component.superCounters.length).toEqual(1);
     expect(component.superCounters[0].value).toEqual(6)
   });
+
+  it("make sure super duper counters are intialized", () => {
+    for (let i = 0; i < 17; i++) {
+      component.addCounter();
+    }
+
+    //summon the super duper
+    component.addCounter();
+
+    let superDuper = component.superDuperCounters[0];
+
+    expect(superDuper.value).toEqual(0);
+  })
+
+  it('make sure value of super duper is correct', () => {
+    for (let i = 0; i < 17; i++) {
+      component.addCounter();
+    }
+
+    component.superCounters[0].setValue(200);
+    component.superCounters[1].setValue(100);
+
+    component.counters[3].value = 4;
+    component.counters[2].value = 6;
+
+    component.addCounter();
+
+    expect(component.superDuperCounters[0].value).toEqual(310);
+  })
   
 });

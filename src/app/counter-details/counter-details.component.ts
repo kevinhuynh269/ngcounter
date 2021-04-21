@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CounterComponent } from '../counter/counter.component';
 import { SuperCounterComponent } from '../super-counter/super-counter.component';
+import { SuperDuperCounterComponent } from '../super-duper-counter/super-duper-counter.component';
 
 @Component({
   selector: 'app-counter-details',
@@ -8,7 +9,7 @@ import { SuperCounterComponent } from '../super-counter/super-counter.component'
   styleUrls: ['./counter-details.component.css']
 })
 export class CounterDetailsComponent implements OnInit {
-  @Input() counter: CounterComponent | SuperCounterComponent; 
+  @Input() counter: CounterComponent | SuperCounterComponent | SuperDuperCounterComponent; 
   @Input('message') message: string;
 
   constructor() {

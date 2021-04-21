@@ -2,6 +2,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CounterComponent } from '../counter/counter.component';
 import { SuperCounterComponent } from '../super-counter/super-counter.component';
+import { SuperDuperCounterComponent } from '../super-duper-counter/super-duper-counter.component';
 
 import { CounterDetailsComponent } from './counter-details.component';
 
@@ -10,6 +11,7 @@ describe('CounterDetailsComponent', () => {
   let fixture: ComponentFixture<CounterDetailsComponent>;
   let counter: CounterComponent;
   let superCounter: SuperCounterComponent;
+  let superDuperCounter: SuperDuperCounterComponent;
 
   const normalMessage = "This is a Normal Counter";
   const superMessage = '🔥🔥🔥 SUPER COUNTER !!!! 🔥🔥🔥🔥🔥';
@@ -36,6 +38,7 @@ describe('CounterDetailsComponent', () => {
     component = fixture.componentInstance;
     counter = new CounterComponent();
     superCounter = new SuperCounterComponent();
+    superDuperCounter = new SuperDuperCounterComponent();
 
     addCounter();
 
@@ -106,6 +109,23 @@ describe('CounterDetailsComponent', () => {
 
     expect(component.message).toEqual(superMessage)
   })
+
+  it("check start button implementation", () => {
+
+    expect(fixture.nativeElement.querySelector("#start")).toBeNull;
+
+    component.counter = superDuperCounter;
+
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.querySelector("#start")).toBeDefined();
+  })
+
+  // it("check value of super duper counter", () => {
+  //   component.
+  // })
+
+
 
 
 
