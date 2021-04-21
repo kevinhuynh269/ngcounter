@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class CounterComponent implements OnInit {
   value : number = 0;
   iterator : number = 1;
+  click : boolean = true;
 
   constructor() {
 

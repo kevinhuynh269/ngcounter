@@ -16,16 +16,10 @@ export class AppComponent {
   superCounters: SuperCounterComponent[] = [];
   
   addCounter() {
-    console.log(this.counters);
     if (this.counters.length == 5) {
-      
       let total = this.counters.reduce((total, obj) => total + obj.value, 0)
 
-      console.log(`total is ${total}`);
-
       let superComponent = new SuperCounterComponent();
-
-      console.log(total);
       superComponent.value = total;
       
       this.superCounters.push(superComponent);

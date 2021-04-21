@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-super-counter',
-  templateUrl: './super-counter.component.html',
-  styleUrls: ['./super-counter.component.css']
+  selector: 'app-super-duper-counter',
+  templateUrl: './super-duper-counter.component.html',
+  styleUrls: ['./super-duper-counter.component.css']
 })
-
-export class SuperCounterComponent implements OnInit {
+export class SuperDuperCounterComponent implements OnInit {
   value : number;
-  iterator : number = 3;
-  click : boolean = true;
+  iterator : number = 1;
+  click : boolean = false;
 
   constructor() {
     this.value = 0;
@@ -31,4 +30,5 @@ export class SuperCounterComponent implements OnInit {
   decreaseValue() {
     this.value -= this.iterator;
   }
+
 }

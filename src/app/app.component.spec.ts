@@ -54,5 +54,37 @@ describe('AppComponent', () => {
     expect(component.counters.length).toEqual(0);
     expect(component.superCounters.length).toEqual(1);
   });
+
+  it('Check value of SuperCounter', () => {
+    expect(component.counters.length).toEqual(0);
+    expect(component.superCounters.length).toEqual(0);
+
+    //create coumters
+    component.addCounter();
+    component.addCounter();
+    component.addCounter();
+    expect(component.counters.length).toEqual(3);
+
+    //increase value of first component
+    let component1 = component.counters[0];
+    component1.increaseValue();
+    component1.increaseValue();
+    component1.increaseValue();
+    expect(component1.value).toEqual(3);
+
+    //increase value of second component
+    let component2 = component.counters[1];
+    component2.increaseValue();
+    component2.increaseValue();
+    component2.increaseValue();
+    expect(component2.value).toEqual(3);
+
+    component.addCounter();
+    component.addCounter();
+    component.addCounter();
+
+    expect(component.superCounters.length).toEqual(1);
+    expect(component.superCounters[0].value).toEqual(6)
+  });
   
 });
