@@ -1,4 +1,5 @@
-import { TestBed, async } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -9,6 +10,16 @@ describe('AppComponent', () => {
       ],
     }).compileComponents();
   }));
+
+  let component: AppComponent;
+  let fixture : ComponentFixture<AppComponent>;
+  
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
+
+    fixture.detectChanges();
+  });
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
