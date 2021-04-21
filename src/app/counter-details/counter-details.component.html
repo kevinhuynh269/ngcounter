@@ -5,10 +5,14 @@
     <div style="padding-top: 10px;"></div>
     <h5 class="card-title">{{message}}</h5>
 
-    <div style="display: flex;">
+    <div *ngIf="counter.click; else startBlock" style="display: flex;">
       <button class="btn btn-danger decrease" [disabled]="counter.value <= (-1 + counter.iterator)" (click) ="decreaseValue()">Decrease</button>
       <div class="p-3">{{counter.value}}</div>
       <button class="btn btn-success increase" (click) = "increaseValue()">Increase</button>
     </div>
+
+    <ng-template #startBlock>
+      Hello this is a start counter
+    </ng-template>
   </div>
 </div>
